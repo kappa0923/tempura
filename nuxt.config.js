@@ -3,7 +3,7 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - tempura',
+    titleTemplate: '%s - GDG Tokyo',
     title: 'tempura',
     meta: [
       { charset: 'utf-8' },
@@ -17,7 +17,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['@/plugins/filter.js'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -36,6 +36,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://i18n.nuxtjs.org/
+    'nuxt-i18n',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -69,6 +71,36 @@ export default {
     },
   },
 
+  // nuxt i18n module configuration (https://i18n.nuxtjs.org/api)
+  i18n: {
+    locales: [
+      {
+        code: 'ja',
+        iso: 'ja-JP',
+        name: '日本語',
+        file: 'ja-JP.js',
+      },
+      {
+        code: 'en',
+        iso: 'en-US',
+        name: 'English',
+        file: 'en-US.js',
+      },
+    ],
+    defaultLocale: 'ja',
+    strategy: 'prefix_and_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+    },
+    lazy: true,
+    langDir: 'lang/',
+    vueI18n: {
+      fallbackLocale: 'ja',
+    },
+  },
+
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    analyze: true,
+  },
 }

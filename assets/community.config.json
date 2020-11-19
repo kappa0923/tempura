@@ -1,0 +1,24 @@
+{
+  "social": [
+    {
+      "name": "twitter",
+      "icon": "mdi-twitter",
+      "link": "https://twitter.com/gdgtokyo"
+    },
+    {
+      "name": "youtube",
+      "icon": "mdi-youtube",
+      "link": "https://www.youtube.com/channel/UCqopF8_oRXuuxBjk_lVB4zQ"
+    },
+    {
+      "name": "connpass",
+      "icon": "mdi-compass",
+      "link": "https://gdg-tokyo.connpass.com/"
+    },
+    {
+      "name": "facebook",
+      "icon": "mdi-facebook",
+      "link": "https://www.facebook.com/GDGTokyo/"
+    }
+  ]
+}
